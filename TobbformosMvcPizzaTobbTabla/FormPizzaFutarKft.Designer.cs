@@ -485,7 +485,9 @@
             // 
             // dataGridViewTetelek
             // 
+            this.dataGridViewTetelek.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridViewTetelek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTetelek.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewTetelek.Location = new System.Drawing.Point(528, 89);
             this.dataGridViewTetelek.Name = "dataGridViewTetelek";
             this.dataGridViewTetelek.Size = new System.Drawing.Size(435, 364);
