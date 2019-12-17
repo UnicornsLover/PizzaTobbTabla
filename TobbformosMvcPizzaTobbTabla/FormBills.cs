@@ -8,29 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TobbbformosPizzaAlkalmazasTobbTabla.Repository;
 
 namespace TobbformosMvcPizzaTobbTabla
 {
     public partial class FormPizzaFutarKft : Form
     {
-        private void tabPageSzamlak_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void tabControlPizzaFutarKFT_Selected(object sender, TabControlEventArgs e)
         {
-            beallitSzamlakTabPageIndulaskor();
+            beallitSzamlakTabPagetIndulaskor();
+            feltoltComboBoxotMegrendelokkel();
         }
 
-        private void beallitSzamlakTabPageIndulaskor()
+        private void feltoltComboBoxotMegrendelokkel()
+        {
+            comboBoxMegrendelok.DataSource = repo.getCustumersName();
+        }
+
+        private void beallitSzamlakTabPagetIndulaskor()
         {
             listViewRendelesek.Visible = false;
-            labelVevoRendeles.Visible = false;
-            dataGridViewTetelek.Visible = false;
-            labelRendeloTetelei.Visible = false;
+            labelRendelesek.Visible = false;
+            dataGridViewTelelek.Visible = false;
+            labelTelelek.Visible = false;
         }
-
-
     }
 }

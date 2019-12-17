@@ -21,7 +21,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `prendeles` (`razon`, `vazon`, `fazon`, `datum`, `ido`,`teljesites`) VALUES " +
+                    "INSERT INTO `prendeles` (`razon`, `vazon`, `fazon`, `datum`, `ido`, `teljesites`) VALUES " +
                             "(1, 4, 2, '2010-10-01', 13.15,1), " +
                             "(2, 7, 2, '2010-10-01', 14.17,0), " +
                             "(3, 1, 1, '2010-10-02', 11.07,0), " +
