@@ -23,18 +23,6 @@ namespace TobbformosMvcPizzaTobbTabla
         {
             InitializeComponent();
             beallitKezdoFormot();
-            betoltAdatbazisbolAdatkat();
-        }
-
-        private void betoltAdatbazisbolAdatkat()
-        {
-            //Adatbázisban pizza tábla kezelése
-            RepositoryDatabaseTablePizza rtp = new RepositoryDatabaseTablePizza();
-            RepositoryDatabaseTableCustomer rtc = new RepositoryDatabaseTableCustomer();
-            RepositoryDatabaseTableCourier rtcu = new RepositoryDatabaseTableCourier();
-            RepositoryDatabaseTableItem rti = new RepositoryDatabaseTableItem();
-            RepositoryDatabaseTableOrder rto = new RepositoryDatabaseTableOrder();
-            
         }
 
         public void beallitKezdoFormot()
