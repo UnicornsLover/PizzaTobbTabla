@@ -74,6 +74,13 @@ namespace TobbformosMvcPizzaTobbTabla
                 rdCourier.fillCourierWithTestDataFromSQLCommand();
                 rdOrder.fillOrderWithTestDataFromSQLCommand();
                 rdItem.fillOrderWithTestDataFromSQLCommand();
+
+                //A repo-ba lévő pizza listát feltölti az adatbázisból
+                repo.setPizzas(rdPizza.getPizzasFromDatabaseTable());
+                repo.setCustomer(rdCustomer.getVevoFromDatabasePvevoTable());
+                repo.setCourier(rdCourier.getFutarFromDatabaseTable());
+                repo.setItem(rdItem.getItemFromDatabaseTable());
+                repo.setOrder(rdOrder.getOrderFromDatabaseTable());
             }
             catch (Exception ex)
             {

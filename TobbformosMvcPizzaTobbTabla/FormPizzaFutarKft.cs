@@ -34,12 +34,7 @@ namespace TobbformosMvcPizzaTobbTabla
             RepositoryDatabaseTableCourier rtcu = new RepositoryDatabaseTableCourier();
             RepositoryDatabaseTableItem rti = new RepositoryDatabaseTableItem();
             RepositoryDatabaseTableOrder rto = new RepositoryDatabaseTableOrder();
-            //A repo-ba lévő pizza listát feltölti az adatbázisból
-            repo.setPizzas(rtp.getPizzasFromDatabaseTable());
-            repo.setCustomer(rtc.getVevoFromDatabasePvevoTable());
-            repo.setCourier(rtcu.getFutarFromDatabaseTable());
-            repo.setItem(rti.getItemFromDatabaseTable());
-            repo.setOrder(rto.getOrderFromDatabaseTable());
+            
         }
 
         public void beallitKezdoFormot()
