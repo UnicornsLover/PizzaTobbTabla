@@ -525,6 +525,7 @@
             this.comboBoxMegrendelok.Name = "comboBoxMegrendelok";
             this.comboBoxMegrendelok.Size = new System.Drawing.Size(250, 21);
             this.comboBoxMegrendelok.TabIndex = 1;
+            this.comboBoxMegrendelok.SelectedIndexChanged += new System.EventHandler(this.comboBoxMegrendelok_SelectedIndexChanged);
             // 
             // labelMegrendelo
             // 

@@ -62,6 +62,7 @@ namespace TobbformosMvcPizzaTobbTabla
         {
             try
             {
+                //tábla létrehozása
                 torolHibauzenetet();
                 rdPizza.createTablePizza();
                 rdCustomer.createTableCustomer();
@@ -69,6 +70,7 @@ namespace TobbformosMvcPizzaTobbTabla
                 rdOrder.createTableOrder();
                 rdItem.createTableOrder();
 
+                //teszte adatok feltöltése
                 rdPizza.fillPizzasWithTestDataFromSQLCommand();
                 rdCustomer.fillCustomerkWithTestDataFromSQLCommand();
                 rdCourier.fillCourierWithTestDataFromSQLCommand();
