@@ -41,11 +41,12 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
             }
             return pizzaDT;
         }
-        internal List<Order> getMegrendelok(string customerName)
+
+
+        public List<Order> getOrders(string customerName)
         {
             int customerId = customers.Find(x => x.getName() == customerName).getID();
             return orders.FindAll(x => x.getCustomerId() == customerId);
         }
-
     }
 }

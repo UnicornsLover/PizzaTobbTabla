@@ -13,7 +13,6 @@ namespace TobbformosMvcPizzaTobbTabla
 {
     public partial class FormPizzaFutarKft : Form
     {
-        
         /// <summary>
         /// Tárolja a pizzákat listában
         /// </summary>
@@ -49,8 +48,6 @@ namespace TobbformosMvcPizzaTobbTabla
         private void számlákToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControlPizzaFutarKFT.SelectTab("tabPageSzamlak");
-        }
-
-        
+        }        
     }
 }

@@ -15,8 +15,6 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
             pizzas = new List<Pizza>();
             customers = new List<Customer>();
             couriers = new List<Courier>();
-        }
-
-        
+        }        
     }
 }
