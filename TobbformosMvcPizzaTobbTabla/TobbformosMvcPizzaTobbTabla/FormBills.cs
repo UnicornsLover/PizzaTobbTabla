@@ -42,7 +42,14 @@ namespace TobbformosMvcPizzaTobbTabla
             foreach(Order megrendelo in megrendelok)
             {
                 ListViewItem lvi = new ListViewItem();
-                
+                lvi.SubItems.Add(megrendelo.getCourierId().ToString());
+                lvi.SubItems.Add(megrendelo.getCustomerId().ToString());
+                lvi.SubItems.Add(megrendelo.getDate().ToString());
+                lvi.SubItems.Add(megrendelo.getTime().ToString());
+                lvi.SubItems.Add(megrendelo.getDone().ToString());
+
+                listViewRendelesek.Items.Add(lvi);
+
             }
         }
 
@@ -52,6 +59,16 @@ namespace TobbformosMvcPizzaTobbTabla
             labelRendelesek.Visible = false;
             dataGridViewTelelek.Visible = false;
             labelTelelek.Visible = false;
+
+            listViewRendelesek.GridLines = true;
+            listViewRendelesek.View = View.Details;
+            listViewRendelesek.Columns.Add("Azonosító: ");
+            listViewRendelesek.Columns.Add("Futár: ");
+            listViewRendelesek.Columns.Add("Megrendelő: ");
+            listViewRendelesek.Columns.Add("Dátum: ");
+            listViewRendelesek.Columns.Add("Idő: ");
+            listViewRendelesek.Columns.Add("Teljesítés: ");
+
         }
     }
 }
