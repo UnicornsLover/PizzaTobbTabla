@@ -38,7 +38,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
                             goodResult = int.TryParse(dr["fazon"].ToString(), out fazon);
                             if (goodResult)
                             {
-                                string datum = dr["fazon"].ToString();
+                                string datum = dr["datum"].ToString();
 
                                 double ido = -1;
                                 goodResult = double.TryParse(dr["ido"].ToString(), out ido);

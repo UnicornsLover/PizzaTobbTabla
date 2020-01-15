@@ -37,20 +37,25 @@ namespace TobbformosMvcPizzaTobbTabla
 
         private void feltoltListViewtAdatokkal(string megrendeloNev)
         {
+            listViewRendelesek.Items.Clear();
             List<Order> megrendelok=repo.getOrders(megrendeloNev);
 
             foreach(Order megrendelo in megrendelok)
             {
-                ListViewItem lvi = new ListViewItem();
+                ListViewItem lvi = new ListViewItem(megrendelo.getOrderId().ToString());
                 lvi.SubItems.Add(megrendelo.getCourierId().ToString());
                 lvi.SubItems.Add(megrendelo.getCustomerId().ToString());
-                lvi.SubItems.Add(megrendelo.getDate().ToString());
-                lvi.SubItems.Add(megrendelo.getTime().ToString());
+                lvi.SubItems.Add(megrendelo.getDate().Substring(0,13).ToString());
+                lvi.SubItems.Add(megrendelo.getTime().ToString().Replace(',',':'));
                 lvi.SubItems.Add(megrendelo.getDone().ToString());
-
                 listViewRendelesek.Items.Add(lvi);
-
             }
+            listViewRendelesek.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewRendelesek.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewRendelesek.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewRendelesek.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewRendelesek.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewRendelesek.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void beallitSzamlakTabPagetIndulaskor()
@@ -59,6 +64,10 @@ namespace TobbformosMvcPizzaTobbTabla
             labelRendelesek.Visible = false;
             dataGridViewTelelek.Visible = false;
             labelTelelek.Visible = false;
+
+            listViewRendelesek.GridLines = true;
+            listViewRendelesek.View = View.Details;
+            listViewRendelesek.FullRowSelect = true;
 
             listViewRendelesek.GridLines = true;
             listViewRendelesek.View = View.Details;
