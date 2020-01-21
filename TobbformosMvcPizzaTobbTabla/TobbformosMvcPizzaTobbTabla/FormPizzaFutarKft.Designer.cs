@@ -149,7 +149,7 @@
             this.többtöbbKapcsolatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.számlákToolStripMenuItem});
             this.többtöbbKapcsolatToolStripMenuItem.Name = "többtöbbKapcsolatToolStripMenuItem";
-            this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.többtöbbKapcsolatToolStripMenuItem.Text = "Több-több kapcsolat";
             // 
             // számlákToolStripMenuItem
@@ -164,7 +164,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -517,6 +517,7 @@
             this.listViewRendelesek.Size = new System.Drawing.Size(404, 333);
             this.listViewRendelesek.TabIndex = 2;
             this.listViewRendelesek.UseCompatibleStateImageBehavior = false;
+            this.listViewRendelesek.SelectedIndexChanged += new System.EventHandler(this.listViewRendelesek_SelectedIndexChanged);
             // 
             // comboBoxMegrendelok
             // 

@@ -45,9 +45,9 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
                                 if (goodResult)
                                 {
                                     bool teljesitve = false;
-                                    int teljesitveInt;
-                                    goodResult = int.TryParse(dr["teljesites"].ToString(), out teljesitveInt);
-                                    if (teljesitveInt == 1)
+                                    string teljesites;
+                                    teljesites = dr["teljesites"].ToString();
+                                    if (teljesites == "True")
                                         teljesitve = true;
                                     Order o = new Order(razon, vazon, fazon, datum, ido, teljesitve);
                                     orders.Add(o);
