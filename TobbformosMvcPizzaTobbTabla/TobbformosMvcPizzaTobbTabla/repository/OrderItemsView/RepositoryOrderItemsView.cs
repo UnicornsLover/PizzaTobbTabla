@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,21 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
         public int getFinalPrice()
         {
             return finalPrice;
+        }
+
+        public DataTable getOrderItemsViewDT()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("pizza_nev",typeof(string));
+            dt.Columns.Add("mennyiseg", typeof(int));
+            dt.Columns.Add("egysegar",typeof(int));
+            dt.Columns.Add("tetelosszeg", typeof(int));
+
+            foreach (OrderItemsView oiv in roiv)
+            {
+                dt.Rows.Add(oiv.Name,oiv.Price,oiv.Piece,oiv.Price*oiv.Piece);
+            }
+            return dt;
         }
     }
 }
