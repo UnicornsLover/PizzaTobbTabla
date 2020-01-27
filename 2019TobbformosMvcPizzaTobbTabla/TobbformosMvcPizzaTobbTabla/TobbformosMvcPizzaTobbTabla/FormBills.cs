@@ -17,7 +17,7 @@ namespace TobbformosMvcPizzaTobbTabla
         private void tabControlPizzaFutarKFT_Selected(object sender, TabControlEventArgs e)
         {
             beallitSzamlakTabPagetIndulaskor();
-            feltoltComboBoxotMegrendelokkel();
+            feltoltComboBoxotMegrendelokkel(); 
         }
 
         private void feltoltComboBoxotMegrendelokkel()

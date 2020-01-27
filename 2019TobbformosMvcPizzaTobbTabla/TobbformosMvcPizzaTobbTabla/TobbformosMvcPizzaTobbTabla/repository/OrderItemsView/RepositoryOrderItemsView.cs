@@ -15,10 +15,11 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
         /// Rendelések tételeit tartalmazza a megjelenítéshez
         /// </summary>
         private List<OrderItemsView> roiv;
+
         /// <summary>
-        /// A fizetendő összeg
+        /// A fizetendő végösszeg
         /// </summary>
-        private int finalPrice;
+        private int finalPrice=0;
 
         /// <summary>
         /// Konstruktor, amely a rendelés száma alapján feltölti a listát
@@ -26,21 +27,22 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
         /// <param name="orderNumber">Rendelés azonosító</param>
         public RepositoryOrderItemsView(int orderNumber, List<Item> items, List<Pizza> pizzas)
         {
-            List<Item> iviews = items.FindAll(i=> i.getOrderId() == orderNumber);
+            List<Item> iviews = items.FindAll(i => i.getOrderId() == orderNumber);
             finalPrice = 0;
-            foreach (Item i in iviews)
+            foreach(Item i in iviews)
             {
                 Pizza pizza = pizzas.Find(p => p.getId() == i.getPizzaId());
-                finalPrice = finalPrice + pizza.getPrice() * i.getPiece();
+                finalPrice = finalPrice + i.getPiece() * pizza.getPrice();
                 OrderItemsView oiv = new OrderItemsView(
-                    orderNumber,
-                    i.getPiece(),
-                    pizza.getNeme(),
-                    pizza.getPrice()
+                        orderNumber,
+                        i.getPiece(),
+                        pizza.getNeme(),
+                        pizza.getPrice()
                     );
                 roiv.Add(oiv);
-            } 
+            }
         }
+
         public int getFinalPrice()
         {
             return finalPrice;
@@ -49,14 +51,15 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
         public DataTable getOrderItemsViewDT()
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("pizza_nev",typeof(string));
-            dt.Columns.Add("mennyiseg", typeof(int));
-            dt.Columns.Add("egysegar",typeof(int));
-            dt.Columns.Add("tetelosszeg", typeof(int));
 
-            foreach (OrderItemsView oiv in roiv)
+            dt.Columns.Add("pizza_nev",typeof(string));
+            dt.Columns.Add("mennyiseg",typeof(int));
+            dt.Columns.Add("egysegar",typeof(int));
+            dt.Columns.Add("tetelar",typeof(int));
+
+            foreach(OrderItemsView oiv in roiv)
             {
-                dt.Rows.Add(oiv.Name,oiv.Price,oiv.Piece,oiv.Price*oiv.Piece);
+                dt.Rows.Add(oiv.Name, oiv.Piece, oiv.Price, oiv.Piece * oiv.Price);
             }
             return dt;
         }

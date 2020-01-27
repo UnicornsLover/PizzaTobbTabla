@@ -33,6 +33,5 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
         {
             return piece;
         }
-
     }
 }
