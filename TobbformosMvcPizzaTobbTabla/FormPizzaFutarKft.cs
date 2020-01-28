@@ -30,6 +30,17 @@ namespace TobbformosMvcPizzaTobbTabla
             this.Text = "Pizza Futar KFT.";
         }
 
+        private void tabControlPizzaFutarKFT_Selected(object sender, TabControlEventArgs e)
+        {
+            //Szamlakészitő
+            beallitSzamlakTabPagetIndulaskor();
+            feltoltComboBoxotMegrendelokkel();
+
+            //Megrendelés készités
+            fillComboBoxCustomer();
+        }
+
+        
         private void megrendelőToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControlPizzaFutarKFT.SelectTab("tabPageMegrendelok");
@@ -50,6 +61,9 @@ namespace TobbformosMvcPizzaTobbTabla
             tabControlPizzaFutarKFT.SelectTab("tabPageSzamlak");
         }
 
-        
+        private void megrendeléstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControlPizzaFutarKFT.SelectTab("tabPageMegrendeles");
+        }
     }
 }

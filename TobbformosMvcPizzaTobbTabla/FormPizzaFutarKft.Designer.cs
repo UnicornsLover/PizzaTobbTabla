@@ -37,6 +37,7 @@
             this.egytöbbKapkcsolatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.többtöbbKapcsolatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.számlákToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.megrendeléstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesztadatokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatázbázisLétrehozásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,16 +72,19 @@
             this.tabPageFutarok = new System.Windows.Forms.TabPage();
             this.tabPageMegrendelok = new System.Windows.Forms.TabPage();
             this.tabPageSzamlak = new System.Windows.Forms.TabPage();
+            this.labelVegOsszeg = new System.Windows.Forms.Label();
+            this.textBoxVegOsszeg = new System.Windows.Forms.TextBox();
             this.dataGridViewTelelek = new System.Windows.Forms.DataGridView();
             this.labelTelelek = new System.Windows.Forms.Label();
             this.labelRendelesek = new System.Windows.Forms.Label();
             this.listViewRendelesek = new System.Windows.Forms.ListView();
             this.comboBoxMegrendelok = new System.Windows.Forms.ComboBox();
             this.labelMegrendelo = new System.Windows.Forms.Label();
+            this.tabPageMegrendeles = new System.Windows.Forms.TabPage();
             this.errorProviderPizzaName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPizzaPrice = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBoxVegOsszeg = new System.Windows.Forms.TextBox();
-            this.labelVegOsszeg = new System.Windows.Forms.Label();
+            this.comboBoxCustomer = new System.Windows.Forms.ComboBox();
+            this.labelCustomer = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStripStatus.SuspendLayout();
             this.toolStripToolbar.SuspendLayout();
@@ -91,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPizzak)).BeginInit();
             this.tabPageSzamlak.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelelek)).BeginInit();
+            this.tabPageMegrendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaPrice)).BeginInit();
             this.SuspendLayout();
@@ -122,21 +127,21 @@
             // pizzaToolStripMenuItem
             // 
             this.pizzaToolStripMenuItem.Name = "pizzaToolStripMenuItem";
-            this.pizzaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.pizzaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pizzaToolStripMenuItem.Text = "Pizza";
             this.pizzaToolStripMenuItem.Click += new System.EventHandler(this.pizzaToolStripMenuItem_Click);
             // 
             // futárToolStripMenuItem
             // 
             this.futárToolStripMenuItem.Name = "futárToolStripMenuItem";
-            this.futárToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.futárToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.futárToolStripMenuItem.Text = "Futár";
             this.futárToolStripMenuItem.Click += new System.EventHandler(this.futárToolStripMenuItem_Click);
             // 
             // megrendelőToolStripMenuItem
             // 
             this.megrendelőToolStripMenuItem.Name = "megrendelőToolStripMenuItem";
-            this.megrendelőToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.megrendelőToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.megrendelőToolStripMenuItem.Text = "Megrendelő";
             this.megrendelőToolStripMenuItem.Click += new System.EventHandler(this.megrendelőToolStripMenuItem_Click);
             // 
@@ -149,7 +154,8 @@
             // többtöbbKapcsolatToolStripMenuItem
             // 
             this.többtöbbKapcsolatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.számlákToolStripMenuItem});
+            this.számlákToolStripMenuItem,
+            this.megrendeléstToolStripMenuItem});
             this.többtöbbKapcsolatToolStripMenuItem.Name = "többtöbbKapcsolatToolStripMenuItem";
             this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.többtöbbKapcsolatToolStripMenuItem.Text = "Több-több kapcsolat";
@@ -157,9 +163,16 @@
             // számlákToolStripMenuItem
             // 
             this.számlákToolStripMenuItem.Name = "számlákToolStripMenuItem";
-            this.számlákToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.számlákToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.számlákToolStripMenuItem.Text = "Számlák";
             this.számlákToolStripMenuItem.Click += new System.EventHandler(this.számlákToolStripMenuItem_Click);
+            // 
+            // megrendeléstToolStripMenuItem
+            // 
+            this.megrendeléstToolStripMenuItem.Name = "megrendeléstToolStripMenuItem";
+            this.megrendeléstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.megrendeléstToolStripMenuItem.Text = "Megrendelést";
+            this.megrendeléstToolStripMenuItem.Click += new System.EventHandler(this.megrendeléstToolStripMenuItem_Click);
             // 
             // tesztadatokToolStripMenuItem
             // 
@@ -177,7 +190,7 @@
             this.törölTesztadatokatToolStripMenuItem,
             this.törölAdatbázisToolStripMenuItem});
             this.adatbázisToolStripMenuItem.Name = "adatbázisToolStripMenuItem";
-            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adatbázisToolStripMenuItem.Text = "Adatbázis";
             // 
             // adatázbázisLétrehozásToolStripMenuItem
@@ -279,6 +292,7 @@
             this.tabControlPizzaFutarKFT.Controls.Add(this.tabPageFutarok);
             this.tabControlPizzaFutarKFT.Controls.Add(this.tabPageMegrendelok);
             this.tabControlPizzaFutarKFT.Controls.Add(this.tabPageSzamlak);
+            this.tabControlPizzaFutarKFT.Controls.Add(this.tabPageMegrendeles);
             this.tabControlPizzaFutarKFT.Location = new System.Drawing.Point(0, 52);
             this.tabControlPizzaFutarKFT.Name = "tabControlPizzaFutarKFT";
             this.tabControlPizzaFutarKFT.SelectedIndex = 0;
@@ -487,6 +501,22 @@
             this.tabPageSzamlak.Text = "Számlák";
             this.tabPageSzamlak.UseVisualStyleBackColor = true;
             // 
+            // labelVegOsszeg
+            // 
+            this.labelVegOsszeg.AutoSize = true;
+            this.labelVegOsszeg.Location = new System.Drawing.Point(453, 407);
+            this.labelVegOsszeg.Name = "labelVegOsszeg";
+            this.labelVegOsszeg.Size = new System.Drawing.Size(117, 13);
+            this.labelVegOsszeg.TabIndex = 7;
+            this.labelVegOsszeg.Text = "A fizetendő végösszeg:";
+            // 
+            // textBoxVegOsszeg
+            // 
+            this.textBoxVegOsszeg.Location = new System.Drawing.Point(851, 406);
+            this.textBoxVegOsszeg.Name = "textBoxVegOsszeg";
+            this.textBoxVegOsszeg.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVegOsszeg.TabIndex = 6;
+            // 
             // dataGridViewTelelek
             // 
             this.dataGridViewTelelek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -541,6 +571,18 @@
             this.labelMegrendelo.TabIndex = 0;
             this.labelMegrendelo.Text = "Válasszon ki egy megrendelőt:";
             // 
+            // tabPageMegrendeles
+            // 
+            this.tabPageMegrendeles.Controls.Add(this.labelCustomer);
+            this.tabPageMegrendeles.Controls.Add(this.comboBoxCustomer);
+            this.tabPageMegrendeles.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMegrendeles.Name = "tabPageMegrendeles";
+            this.tabPageMegrendeles.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMegrendeles.Size = new System.Drawing.Size(1000, 623);
+            this.tabPageMegrendeles.TabIndex = 4;
+            this.tabPageMegrendeles.Text = "Megrendelés";
+            this.tabPageMegrendeles.UseVisualStyleBackColor = true;
+            // 
             // errorProviderPizzaName
             // 
             this.errorProviderPizzaName.ContainerControl = this;
@@ -549,21 +591,22 @@
             // 
             this.errorProviderPizzaPrice.ContainerControl = this;
             // 
-            // textBoxVegOsszeg
+            // comboBoxCustomer
             // 
-            this.textBoxVegOsszeg.Location = new System.Drawing.Point(851, 406);
-            this.textBoxVegOsszeg.Name = "textBoxVegOsszeg";
-            this.textBoxVegOsszeg.Size = new System.Drawing.Size(100, 20);
-            this.textBoxVegOsszeg.TabIndex = 6;
+            this.comboBoxCustomer.FormattingEnabled = true;
+            this.comboBoxCustomer.Location = new System.Drawing.Point(110, 23);
+            this.comboBoxCustomer.Name = "comboBoxCustomer";
+            this.comboBoxCustomer.Size = new System.Drawing.Size(309, 21);
+            this.comboBoxCustomer.TabIndex = 0;
             // 
-            // labelVegOsszeg
+            // labelCustomer
             // 
-            this.labelVegOsszeg.AutoSize = true;
-            this.labelVegOsszeg.Location = new System.Drawing.Point(453, 407);
-            this.labelVegOsszeg.Name = "labelVegOsszeg";
-            this.labelVegOsszeg.Size = new System.Drawing.Size(117, 13);
-            this.labelVegOsszeg.TabIndex = 7;
-            this.labelVegOsszeg.Text = "A fizetendő végösszeg:";
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Location = new System.Drawing.Point(20, 26);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(72, 13);
+            this.labelCustomer.TabIndex = 1;
+            this.labelCustomer.Text = "Megrendelők:";
             // 
             // FormPizzaFutarKft
             // 
@@ -592,6 +635,8 @@
             this.tabPageSzamlak.ResumeLayout(false);
             this.tabPageSzamlak.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelelek)).EndInit();
+            this.tabPageMegrendeles.ResumeLayout(false);
+            this.tabPageMegrendeles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaPrice)).EndInit();
             this.ResumeLayout(false);
@@ -653,6 +698,10 @@
         private System.Windows.Forms.Label labelMegrendelo;
         private System.Windows.Forms.Label labelVegOsszeg;
         private System.Windows.Forms.TextBox textBoxVegOsszeg;
+        private System.Windows.Forms.TabPage tabPageMegrendeles;
+        private System.Windows.Forms.ToolStripMenuItem megrendeléstToolStripMenuItem;
+        private System.Windows.Forms.Label labelCustomer;
+        private System.Windows.Forms.ComboBox comboBoxCustomer;
     }
 }
 
