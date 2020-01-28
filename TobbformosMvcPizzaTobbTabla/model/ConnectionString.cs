@@ -27,5 +27,6 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
                 + "PASSWORD=\"\";"
                 + "PORT=\"3306\";";
         }
+
     }
 }
