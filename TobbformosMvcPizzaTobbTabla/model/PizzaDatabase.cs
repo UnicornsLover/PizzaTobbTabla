@@ -15,7 +15,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
                 "VALUES ('" +
                 id +
                 "', '" +
-                getNeme() +
+                getName() +
                 "', '" +
                 getPrice() +
                 "');";
@@ -25,7 +25,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
         {
             return
                 "UPDATE `ppizza` SET `pnev` = '" +
-                getNeme() +
+                getName() +
                 "', `par` = '" +
                 getPrice() +
                 "' WHERE `ppizza`.`pazon` = " +

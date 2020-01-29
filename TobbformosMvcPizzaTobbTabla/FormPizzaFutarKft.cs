@@ -38,9 +38,11 @@ namespace TobbformosMvcPizzaTobbTabla
 
             //Megrendelés készités
             fillComboBoxCustomer();
+
+            //DataGridViewt gyártya le
+            createDinamicDataGridViewToOrders();
         }
 
-        
         private void megrendelőToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControlPizzaFutarKFT.SelectTab("tabPageMegrendelok");
