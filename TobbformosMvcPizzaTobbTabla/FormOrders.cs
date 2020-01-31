@@ -31,13 +31,48 @@ namespace TobbformosMvcPizzaTobbTabla
             cbc.HeaderText = "Pizza név:";
             cbc.MaxDropDownItems = 5;
             cbc.DataSource = repo.getPizzasName();
+            cbc.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            DataGridViewButtonColumn bcPlusz = new DataGridViewButtonColumn();
+            bcPlusz.HeaderText = "Mennyiség növelés";
+            bcPlusz.Name = "bcPlusz";
+            bcPlusz.Text = "+";
+            bcPlusz.UseColumnTextForButtonValue = true;
+            bcPlusz.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            DataGridViewButtonColumn bcMinus = new DataGridViewButtonColumn();
+            bcMinus.HeaderText = "Mennyiség csökkentés";
+            bcMinus.Name = "bcMinus";
+            bcMinus.Text = "-";
+            bcMinus.UseColumnTextForButtonValue = true;
+            bcMinus.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            DataGridViewButtonColumn tbcMennyiseg = new DataGridViewButtonColumn();
+            bcMinus.HeaderText = "Mennyiség";
+            bcMinus.Name = "mennyiseg";
+            tbcMennyiseg.UseColumnTextForButtonValue = true;
+            bcMinus.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            DataGridViewButtonColumn tbcEgyseg = new DataGridViewButtonColumn();
+            tbcEgyseg.HeaderText = "Egyslégár";
+            tbcEgyseg.Name = "egysegar";
+            tbcEgyseg.UseColumnTextForButtonValue = true;
+            tbcEgyseg.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+
+            dgv.Width = 600;
+            dgv.Columns.Add(cbc);
+            dgv.Columns.Add(bcPlusz);
+            dgv.Columns.Add(bcMinus);
+            dgv.Columns.Add(tbcMennyiseg);
+            dgv.Columns.Add(tbcEgyseg);
+
 
             dgv.Location = new Point(40, 55);
-            dgv.Columns.Add(cbc);
 
             //tabPageMegrendeles.SuspendLayout();
             tabPageMegrendeles.Controls.Add(dgv);
-            tabPageMegrendeles.Refresh();
+            //tabPageMegrendeles.Refresh();
         }
 
 
