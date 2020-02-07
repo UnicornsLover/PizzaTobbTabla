@@ -32,7 +32,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
 
         public void update(Pizza modified)
         {
-            this.name = modified.getName();
+            this.name = modified.getNeme();
             this.price = modified.getPrice();
         }
 
@@ -78,7 +78,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Model
         {
             return id;
         }
-        public string getName()
+        public string getNeme()
         {
             return name;
         }

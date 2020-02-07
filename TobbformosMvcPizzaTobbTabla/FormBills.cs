@@ -14,7 +14,6 @@ namespace TobbformosMvcPizzaTobbTabla
 {
     public partial class FormPizzaFutarKft : Form
     {
-
         private void feltoltComboBoxotMegrendelokkel()
         {
             comboBoxMegrendelok.DataSource = repo.getCustumersName();

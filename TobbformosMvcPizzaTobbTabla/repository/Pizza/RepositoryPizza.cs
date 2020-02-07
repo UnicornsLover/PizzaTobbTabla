@@ -21,9 +21,9 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
         public List<string> getPizzasName()
         {
             List<string> pizzaNames = new List<string>();
-            foreach (Pizza p in pizzas)
+            foreach(Pizza p in pizzas)
             {
-                pizzaNames.Add(p.getName());
+                pizzaNames.Add(p.getNeme());
             }
             return pizzaNames;
         }
@@ -51,7 +51,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
             pizzaDT.Columns.Add("ar", typeof(int));
             foreach (Pizza p in pizzas)
             {
-                pizzaDT.Rows.Add(p.getId(), p.getName(), p.getPrice());
+                pizzaDT.Rows.Add(p.getId(), p.getNeme(), p.getPrice());
             }
             return pizzaDT;
         }

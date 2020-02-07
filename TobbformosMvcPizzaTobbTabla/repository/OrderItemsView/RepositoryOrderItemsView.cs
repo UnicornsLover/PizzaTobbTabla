@@ -37,7 +37,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
                 OrderItemsView oiv = new OrderItemsView(
                         orderNumber,
                         i.getPiece(),
-                        pizza.getName(),
+                        pizza.getNeme(),
                         pizza.getPrice()
                     );
                 roiv.Add(oiv);

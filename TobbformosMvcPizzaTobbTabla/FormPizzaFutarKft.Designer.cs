@@ -37,7 +37,7 @@
             this.egytöbbKapkcsolatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.többtöbbKapcsolatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.számlákToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.megrendeléstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.megrendelésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesztadatokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatázbázisLétrehozásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,21 +127,21 @@
             // pizzaToolStripMenuItem
             // 
             this.pizzaToolStripMenuItem.Name = "pizzaToolStripMenuItem";
-            this.pizzaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pizzaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.pizzaToolStripMenuItem.Text = "Pizza";
             this.pizzaToolStripMenuItem.Click += new System.EventHandler(this.pizzaToolStripMenuItem_Click);
             // 
             // futárToolStripMenuItem
             // 
             this.futárToolStripMenuItem.Name = "futárToolStripMenuItem";
-            this.futárToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.futárToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.futárToolStripMenuItem.Text = "Futár";
             this.futárToolStripMenuItem.Click += new System.EventHandler(this.futárToolStripMenuItem_Click);
             // 
             // megrendelőToolStripMenuItem
             // 
             this.megrendelőToolStripMenuItem.Name = "megrendelőToolStripMenuItem";
-            this.megrendelőToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.megrendelőToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.megrendelőToolStripMenuItem.Text = "Megrendelő";
             this.megrendelőToolStripMenuItem.Click += new System.EventHandler(this.megrendelőToolStripMenuItem_Click);
             // 
@@ -155,7 +155,7 @@
             // 
             this.többtöbbKapcsolatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.számlákToolStripMenuItem,
-            this.megrendeléstToolStripMenuItem});
+            this.megrendelésToolStripMenuItem});
             this.többtöbbKapcsolatToolStripMenuItem.Name = "többtöbbKapcsolatToolStripMenuItem";
             this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.többtöbbKapcsolatToolStripMenuItem.Text = "Több-több kapcsolat";
@@ -167,12 +167,12 @@
             this.számlákToolStripMenuItem.Text = "Számlák";
             this.számlákToolStripMenuItem.Click += new System.EventHandler(this.számlákToolStripMenuItem_Click);
             // 
-            // megrendeléstToolStripMenuItem
+            // megrendelésToolStripMenuItem
             // 
-            this.megrendeléstToolStripMenuItem.Name = "megrendeléstToolStripMenuItem";
-            this.megrendeléstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.megrendeléstToolStripMenuItem.Text = "Megrendelést";
-            this.megrendeléstToolStripMenuItem.Click += new System.EventHandler(this.megrendeléstToolStripMenuItem_Click);
+            this.megrendelésToolStripMenuItem.Name = "megrendelésToolStripMenuItem";
+            this.megrendelésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.megrendelésToolStripMenuItem.Text = "Megrendelés";
+            this.megrendelésToolStripMenuItem.Click += new System.EventHandler(this.megrendelésToolStripMenuItem_Click);
             // 
             // tesztadatokToolStripMenuItem
             // 
@@ -190,7 +190,7 @@
             this.törölTesztadatokatToolStripMenuItem,
             this.törölAdatbázisToolStripMenuItem});
             this.adatbázisToolStripMenuItem.Name = "adatbázisToolStripMenuItem";
-            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.adatbázisToolStripMenuItem.Text = "Adatbázis";
             // 
             // adatázbázisLétrehozásToolStripMenuItem
@@ -594,19 +594,19 @@
             // comboBoxCustomer
             // 
             this.comboBoxCustomer.FormattingEnabled = true;
-            this.comboBoxCustomer.Location = new System.Drawing.Point(110, 23);
+            this.comboBoxCustomer.Location = new System.Drawing.Point(138, 30);
             this.comboBoxCustomer.Name = "comboBoxCustomer";
-            this.comboBoxCustomer.Size = new System.Drawing.Size(309, 21);
+            this.comboBoxCustomer.Size = new System.Drawing.Size(290, 21);
             this.comboBoxCustomer.TabIndex = 0;
             // 
             // labelCustomer
             // 
             this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Location = new System.Drawing.Point(20, 26);
+            this.labelCustomer.Location = new System.Drawing.Point(59, 30);
             this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(72, 13);
+            this.labelCustomer.Size = new System.Drawing.Size(63, 13);
             this.labelCustomer.TabIndex = 1;
-            this.labelCustomer.Text = "Megrendelők:";
+            this.labelCustomer.Text = "Megrendelő";
             // 
             // FormPizzaFutarKft
             // 
@@ -699,7 +699,7 @@
         private System.Windows.Forms.Label labelVegOsszeg;
         private System.Windows.Forms.TextBox textBoxVegOsszeg;
         private System.Windows.Forms.TabPage tabPageMegrendeles;
-        private System.Windows.Forms.ToolStripMenuItem megrendeléstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem megrendelésToolStripMenuItem;
         private System.Windows.Forms.Label labelCustomer;
         private System.Windows.Forms.ComboBox comboBoxCustomer;
     }
