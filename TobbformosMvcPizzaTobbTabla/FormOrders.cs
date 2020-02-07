@@ -31,7 +31,7 @@ namespace TobbformosMvcPizzaTobbTabla
 
             dgv.CellContentClick += Dgv_CellContentClick;
             dgv.DefaultValuesNeeded += Dgv_DefaultValuesNeeded;
-            dgv.EditingControlShowing += Dgv_EditingControlShowing;            
+            dgv.CellValueChanged += Dgv_CellValueChanged;
 
             DataGridViewComboBoxColumn cbc = new DataGridViewComboBoxColumn();
             cbc.Name = "pizzaName";
@@ -77,18 +77,18 @@ namespace TobbformosMvcPizzaTobbTabla
 
             tabPageMegrendeles.Controls.Add(dgv);
 
-      }
+        }
 
-        private void Dgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void Dgv_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv.CurrentCell.ColumnIndex == 1 && e.Control is ComboBox)
+            ComboBox cb = (ComboBox)sender;
+            if (cb == null)
             {
-                ComboBox comboBox = e.Control as ComboBox;
-                comboBox.SelectedIndexChanged -= ;
-                comboBox.SelectedIndexChanged +=  ;  
+
             }
         }
 
+        //Új sor hozzáadása 
         private void Dgv_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
             e.Row.Cells[3].Value = "1";
